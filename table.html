@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/table.css">
+    <link rel="stylesheet" href="./styles/alertify.css">
+    <script src="Js/table.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Js/alertify.js"></script>
+    <script src="Js/alertify.min.js"></script>
+</head>
+
+<body>
+    <div class="    row">
+        <div class=" col-md-1 col-lg-3"></div>
+        <div id='tableUser' class="col-sm-12 col-sm-1 col-md-7 col-lg-6">
+            <h1 class=" centerTable">Tabla de usuarios</h1>
+            <table class="col-lg-12">
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Contraseña</td>
+                        <td>Id</td>
+                        <td>Modificar</td>
+                        <td>Eliminar</td>
+                    </tr>
+                </thead>
+                <tbody id='tbody'>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-sm-1 col-md-3 col-lg-4"></div>
+        <div id='add' class="containerOne col-sm-6 col-md-5 col-lg-3 containerTable ">
+            <h1 class="center">Agregar</h1>
+            <form id='formAdd' class="" action="./php/insertUSer.php" method="post">
+                <!-- User -->
+                <div class="container">
+                    <label class="colorLabel" for="username">Usuario</label>
+                </div>
+                <div class="container">
+                    <input id='user' class="input" type="text" placeholder="Ingrese usuario">
+                </div>
+                <!-- Password -->
+                <div class="container">
+                    <label class="colorLabel" for="password">Contraseña</label>
+                </div>
+                <div class="container">
+                    <input id='passwordR' class="input" type="password" placeholder="Ingrese contraseña">
+                </div>
+                <!-- Button -->
+                <div class="container">
+                    <input id="addUSer" class="button" type="button" value="Registar">
+                </div>
+                <div class="container">
+                    <input id="cancel" class="button" type="button" value="Cancelar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1 col-md-3 col-lg-4"></div>
+        <div id='edit' class="containerOne col-sm-6 col-md-5 col-lg-3 containerTable ">
+            <h1 class="center">Editar</h1>
+            <form id='formAdd' class="" action="./php/insertUSer.php" method="post">
+                <!-- User -->
+                <div class="container">
+                    <label class="colorLabel" for="username">Usuario</label>
+                </div>
+                <div class="container">
+                    <input id='editUser' class="input" type="text" placeholder="Ingrese usuario">
+                </div>
+                <!-- Password -->
+                <div class="container">
+                    <label class="colorLabel" for="text">Contraseña</label>
+                </div>
+                <div class="container">
+                    <input id='editPassword' class="input" type="text" placeholder="Ingrese contraseña">
+                </div>
+                <!-- Button -->
+                <div class="container">
+                    <input id="editUSer" class="button" type="button" value="Editar">
+                </div>
+                <div class="container">
+                    <input id="editCancel" class="button" type="button" value="Cancelar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1 col-md-3 col-lg-4"></div>
+        <div id='drop' class="containerOne col-sm-6 col-md-5 col-lg-3 containerTable ">
+            <h1 class="center">Eliminar</h1>
+            <form class="">
+                <!-- User -->
+                <div class="container">
+                    <label id='labelDrop' class="colorLabel"></label>
+                </div>
+                <div class="container">
+                    <input id="buttonDropUser" class="button" type="button" value="Eliminar">
+                </div>
+                <div class="container">
+                    <input id="dropCancel" class="button" type="button" value="Cancelar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-1 col-md-1 col-lg-3"></div>
+        <div id='buttons' class="margen col-sm-5 col-md-3 col-lg-3">
+            <input id="agregar" class=" button" type="button" value="Agregar">
+        </div>
+        <div id='buttonsDos' class="col-sm-5 col-md-3 col-lg-3">
+            <input id="regresar" class=" button" type="button" value="Regresar">
+        </div>
+    </div>
+</body>
+
+</html>
